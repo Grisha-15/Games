@@ -2,7 +2,7 @@ import java.awt.*;
 import java.sql.SQLOutput;
 
 public class Hero {
-    private int speedX, speedY;
+    private int speedX, speedY, sp;
     private Rectangle collision = new Rectangle();
     private Rectangle pl = new Rectangle(Const.X, Const.Y, Const.WIDTH, Const.HEIGHT);
 
