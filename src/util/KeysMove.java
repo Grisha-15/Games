@@ -1,7 +1,5 @@
 package util;
 
-import window.Static;
-
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
