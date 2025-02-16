@@ -1,9 +1,9 @@
+package util;
 
-import java.awt.*;
+import window.Static;
+
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import java.lang.reflect.Array;
-import java.util.ArrayList;
 
 public class KeysMove implements KeyListener {
     @Override
@@ -17,6 +17,7 @@ public class KeysMove implements KeyListener {
             case KeyEvent.VK_ESCAPE -> System.exit(0);
             case KeyEvent.VK_D -> Static.player.moveRight();
             case KeyEvent.VK_A -> Static.player.moveLeft();
+            case KeyEvent.VK_SPACE -> Static.player.jump();
         }
     }
 
