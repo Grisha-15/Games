@@ -10,7 +10,7 @@ public class Main {
         Thread thread = new Thread(panel);
         thread.start();
 
-
+        // Внесены изменения
 
         screen.addKeyListener(keysMove);
         screen.add(panel);
