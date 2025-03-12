@@ -8,27 +8,29 @@ import java.awt.*;
 public class Hero {
     private int speedX, speedY = Const.P_SPEED; // speedX - Горизонтальная скорость, speedY - вертикальная
     private Rectangle floorCollision = new Rectangle(Const.P_X, Const.P_Y + Const.P_HEIGHT - 10, Const.P_WIDTH, 15); // Маска коллизии
-    private Rectangle rightCollision = new Rectangle(Const.P_X, Const.P_Y + 10, 15, 10);
-    private Rectangle leftCollision = new Rectangle(Const.P_X + Const.P_WIDTH - 10, Const.P_Y + 10, 15, 10);
 
     private Rectangle pl = new Rectangle(Const.P_X, Const.P_Y, Const.P_WIDTH, Const.P_HEIGHT); // Ректангл игрока
     private Image player = new ImageIcon("assets/images/player_sprite/player.png").getImage(); // Спрайт игрока
     private boolean onFloor; // Проверка на наличия пола под игроком
 
+    public void setPlayer(Image player) {
+        this.player = player;
+    }
+
     public void update(){
         Const.P_X += speedX;
         Const.P_Y += speedY;
         floorCollision.setBounds(Const.P_X, Const.P_Y + Const.P_HEIGHT - 10, Const.P_WIDTH, 15);
-        rightCollision.setBounds(Const.P_X, Const.P_Y + 10, 15, 270);
-        leftCollision.setBounds(Const.P_X + Const.P_WIDTH - 15, Const.P_Y + 10, 15, 270);
         collisionFloor();
-        collisionRightLeft();
     }
     public void moveRight(){ // Движение вправо
         speedX = Const.P_SPEED;
+        setPlayer(new ImageIcon("assets/images/player_sprite/player.png").getImage());
     }
     public void moveLeft(){ // Движение влево
         speedX = Const.P_SPEED * -1;
+        setPlayer(new ImageIcon("assets/images/player_sprite/playerR.png").getImage());
+
     }
     public void jump(){ // Прыжок
         if (this.onFloor){ // Эт чтобы летать нельзя было
@@ -43,16 +45,6 @@ public class Hero {
                 return;
             } else {
                 this.onFloor = false;
-            }
-        }
-    }
-    private void collisionRightLeft(){ // Коллизия по бокам
-        for (int i = 0; i < Static.blocks.size(); i++){
-            if (rightCollision.intersects(Static.blocks.get(i))){
-                Const.P_X -= Static.blocks.get(i).x - Const.B_WIDTH;
-            }
-            if (leftCollision.intersects(Static.blocks.get(i))){
-                Const.P_X -= Static.blocks.get(i).x - Const.B_WIDTH;
             }
         }
     }
@@ -80,13 +72,5 @@ public class Hero {
 
     public Image getPlayer() {
         return player;
-    }
-
-    public Rectangle getRightCollision() {
-        return rightCollision;
-    }
-
-    public Rectangle getLeftCollision() {
-        return leftCollision;
     }
 }
