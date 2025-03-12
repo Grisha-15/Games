@@ -19,10 +19,10 @@ public class ScreenPanel extends JPanel implements Runnable {
         super.paint(g);
         g.drawImage(Static.level.getBackGround(), Const.BG_X, Const.BG_Y, null);
         g.drawImage(Static.player.getPlayer(), Const.P_X, Const.P_Y, null);
-        g.setColor(new Color(0x0FFFFFF, true));
+        //g.setColor(new Color(0x0FFFFFF, true));
         //g.setColor(new Color(0xFFFFFF));
         //  g.drawRect(Const.P_X, Const.P_Y, Const.P_WIDTH, Const.P_HEIGHT); // Отрисовка персонажа
-        //g.setColor(Color.RED);
+        g.setColor(Color.RED);
         g.drawRect(Static.player.getPl().x, Static.player.getPl().y, Static.player.getPl().width, Static.player.getPl().height);
 
         g.drawRect(Static.player.getFloorCollision().x, Static.player.getFloorCollision().y, Static.player.getFloorCollision().width, Static.player.getFloorCollision().height);

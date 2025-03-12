@@ -22,10 +22,10 @@ public class Main {
 
 
 
-        Static.blocks.add(new Block(0, 345, Const.B_WIDTH, Const.B_HEIGHT));
-        Static.blocks.add(new Block(193, 650, Const.B_WIDTH, Const.B_HEIGHT));
-        Static.blocks.add(new Block(413, 820, Const.B_WIDTH, Const.B_HEIGHT));
-        Static.blocks.add(new Block(639, 651, Const.B_WIDTH, Const.B_HEIGHT)); // 219
+        Static.blocks.add(new Block(290, 297, Const.B_WIDTH, Const.B_HEIGHT));
+        Static.blocks.add(new Block(410, 880, Const.B_WIDTH, Const.B_HEIGHT));
+        Static.blocks.add(new Block(513, 383, Const.B_WIDTH, Const.B_HEIGHT));
+        Static.blocks.add(new Block(584, 715, Const.B_WIDTH, Const.B_HEIGHT)); // 219
         Static.blocks.add(new Block(855, 820, Const.B_WIDTH, Const.B_HEIGHT));
         Static.blocks.add(new Block(1060, 651, Const.B_WIDTH, Const.B_HEIGHT));
         Static.blocks.add(new Block(1264, 544, Const.B_WIDTH, Const.B_HEIGHT));

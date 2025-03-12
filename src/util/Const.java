@@ -7,7 +7,7 @@ public class Const {
     public static final int BG_X = 0, BG_Y = 0;
     // Параметры персонажа
     public static int P_WIDTH = 180, P_HEIGHT = 295;
-    public static int P_X = 0, P_Y = 0;
+    public static int P_X = 290, P_Y = 298;
     public static int P_SPEED = 15;
     public static int P_JUMPFORCE = 300;
     // Параметры платформ
