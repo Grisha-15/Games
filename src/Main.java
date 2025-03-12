@@ -1,4 +1,5 @@
 import things.Block;
+import things.Star;
 import util.Const;
 import util.KeysMove;
 import util.Static;
@@ -14,9 +15,15 @@ public class Main {
         thread.start();
 
         // Внесены изменения
+        Static.stars.add(new Star(239, 532));
+        Static.stars.add(new Star(900, 702));
+        Static.stars.add(new Star(1315,432));
+        Static.stars.add(new Star(1775,182));
+
+
 
         Static.blocks.add(new Block(0, 345, Const.B_WIDTH, Const.B_HEIGHT));
-        Static.blocks.add(new Block(192, 650, Const.B_WIDTH, Const.B_HEIGHT));
+        Static.blocks.add(new Block(193, 650, Const.B_WIDTH, Const.B_HEIGHT));
         Static.blocks.add(new Block(413, 820, Const.B_WIDTH, Const.B_HEIGHT));
         Static.blocks.add(new Block(639, 651, Const.B_WIDTH, Const.B_HEIGHT)); // 219
         Static.blocks.add(new Block(855, 820, Const.B_WIDTH, Const.B_HEIGHT));
